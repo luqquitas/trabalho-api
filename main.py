@@ -93,7 +93,7 @@ class Ui(QtWidgets.QDialog):
     def handleConsultaCota(self):
         
         inputmoeda = self.moedaTextEdit.toPlainText()
-        inputmoeda_2 = int(self.moeda_2TextEdit.toPlainText())
+        inputmoeda_2 = self.moeda_2TextEdit.toPlainText()
 
         if inputmoeda == '' and inputmoeda_2 == None:
             return
