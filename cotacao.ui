@@ -13,12 +13,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="cepLabel">
+  <widget class="QLabel" name="moedaLabel">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>51</width>
+     <width>141</width>
      <height>16</height>
     </rect>
    </property>
@@ -29,24 +29,24 @@
     </font>
    </property>
    <property name="text">
-    <string>Cotação</string>
+    <string>Código da Moeda Base</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="cepTextEdit">
+  <widget class="QTextEdit" name="moedaTextEdit">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>30</y>
-     <width>261</width>
+     <width>191</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="consultaButton">
+  <widget class="QPushButton" name="consultacotacao">
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>30</y>
+     <y>60</y>
      <width>90</width>
      <height>28</height>
     </rect>
@@ -55,11 +55,11 @@
     <string>Consultar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="limparButton">
+  <widget class="QPushButton" name="limparcotacao">
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>70</y>
+     <y>100</y>
      <width>90</width>
      <height>28</height>
     </rect>
@@ -72,9 +72,38 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
+     <y>131</y>
      <width>371</width>
-     <height>192</height>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="moeda_2Label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Código da Segunda Moeda</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="moeda_2TextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>91</y>
+     <width>191</width>
+     <height>31</height>
     </rect>
    </property>
   </widget>
