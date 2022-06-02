@@ -31,8 +31,8 @@ class Ui(QtWidgets.QDialog):
         uic.loadUi(R"C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\cotacao.ui", self)
         self.show()
 
-        #self.consultaButton.clicked.connect(self.handleCotaButton)
-        #self.limparButton.clicked.connect(self.handleLimparButton)
+        self.consultacotacao.clicked.connect(self.handleConsultaCota)
+        self.limparcotacao.clicked.connect(self.handleLimparCotaButton)
 
     def handleCotallButton(self):
         super(Ui, self).__init__()
@@ -89,6 +89,37 @@ class Ui(QtWidgets.QDialog):
         outputText += f'Código {cod}: {valor}\n'
 
         self.conteudoTextBrowser.setText(outputText)
+        
+    def handleConsultaCota(self):
+        
+        inputmoeda = self.moedaTextEdit.toPlainText()
+        inputmoeda_2 = int(self.moeda_2TextEdit.toPlainText())
+
+        if inputmoeda == '' and inputmoeda_2 == None:
+            return
+        
+        reqURL = f'https://economia.awesomeapi.com.br/{inputmoeda}-{inputmoeda_2}'
+        print(reqURL)
+
+        response = requests.get(reqURL)
+
+        contentJson = json.loads(response.content)
+
+        valor = []
+        outputText = ''
+        
+        for dia in contentJson:
+            
+            valor = dia["ask"]
+            
+            outputText += f'{inputmoeda.upper()} - {inputmoeda_2.upper()}: {valor}\n'
+
+        self.conteudoTextBrowser.setText(outputText)
+    
+    def handleLimparCotaButton(self):
+        self.moedaTextEdit.setText('')
+        self.moeda_2TextEdit.setText('')
+        self.conteudoTextBrowser.setText('')
 
 #teste
 
