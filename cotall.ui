@@ -26,19 +26,6 @@
     <string>Consultar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="limparButton">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>60</y>
-     <width>90</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Limpar</string>
-   </property>
-  </widget>
   <widget class="QTextBrowser" name="conteudoTextBrowser">
    <property name="geometry">
     <rect>
