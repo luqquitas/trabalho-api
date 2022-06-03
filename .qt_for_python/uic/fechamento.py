@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\cotacao.ui'
+# Form implementation generated from reading ui file 'c:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\fechamento.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -19,7 +19,7 @@ class Ui_Dialog(object):
         icon.addPixmap(QtGui.QPixmap("c:\\Users\\Lucas Cherobin\\Documents\\GitHub\\trabalho-api\\../../../Desktop/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         self.moedaLabel = QtWidgets.QLabel(Dialog)
-        self.moedaLabel.setGeometry(QtCore.QRect(10, 10, 141, 16))
+        self.moedaLabel.setGeometry(QtCore.QRect(10, 10, 101, 16))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -28,33 +28,33 @@ class Ui_Dialog(object):
         self.moedaTextEdit = QtWidgets.QTextEdit(Dialog)
         self.moedaTextEdit.setGeometry(QtCore.QRect(10, 30, 191, 31))
         self.moedaTextEdit.setObjectName("moedaTextEdit")
-        self.consultacotacao = QtWidgets.QPushButton(Dialog)
-        self.consultacotacao.setGeometry(QtCore.QRect(290, 60, 90, 28))
-        self.consultacotacao.setObjectName("consultacotacao")
-        self.limparcotacao = QtWidgets.QPushButton(Dialog)
-        self.limparcotacao.setGeometry(QtCore.QRect(290, 100, 90, 28))
-        self.limparcotacao.setObjectName("limparcotacao")
+        self.consultafechamento = QtWidgets.QPushButton(Dialog)
+        self.consultafechamento.setGeometry(QtCore.QRect(290, 60, 90, 28))
+        self.consultafechamento.setObjectName("consultafechamento")
+        self.limparFechamentoButton = QtWidgets.QPushButton(Dialog)
+        self.limparFechamentoButton.setGeometry(QtCore.QRect(290, 100, 90, 28))
+        self.limparFechamentoButton.setObjectName("limparFechamentoButton")
         self.conteudoTextBrowser = QtWidgets.QTextBrowser(Dialog)
         self.conteudoTextBrowser.setGeometry(QtCore.QRect(10, 131, 371, 161))
         self.conteudoTextBrowser.setObjectName("conteudoTextBrowser")
-        self.moeda_2Label = QtWidgets.QLabel(Dialog)
-        self.moeda_2Label.setGeometry(QtCore.QRect(10, 70, 161, 16))
+        self.dayLabel = QtWidgets.QLabel(Dialog)
+        self.dayLabel.setGeometry(QtCore.QRect(10, 70, 91, 16))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.moeda_2Label.setFont(font)
-        self.moeda_2Label.setObjectName("moeda_2Label")
-        self.moeda_2TextEdit = QtWidgets.QTextEdit(Dialog)
-        self.moeda_2TextEdit.setGeometry(QtCore.QRect(10, 91, 191, 31))
-        self.moeda_2TextEdit.setObjectName("moeda_2TextEdit")
+        self.dayLabel.setFont(font)
+        self.dayLabel.setObjectName("dayLabel")
+        self.dayTextEdit = QtWidgets.QTextEdit(Dialog)
+        self.dayTextEdit.setGeometry(QtCore.QRect(10, 91, 191, 31))
+        self.dayTextEdit.setObjectName("dayTextEdit")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Cotação"))
-        self.moedaLabel.setText(_translate("Dialog", "Código da Moeda Base"))
-        self.consultacotacao.setText(_translate("Dialog", "Consultar"))
-        self.limparcotacao.setText(_translate("Dialog", "Limpar"))
-        self.moeda_2Label.setText(_translate("Dialog", "Código da Segunda Moeda"))
+        Dialog.setWindowTitle(_translate("Dialog", "Fechamento"))
+        self.moedaLabel.setText(_translate("Dialog", "Código da Moeda"))
+        self.consultafechamento.setText(_translate("Dialog", "Consultar"))
+        self.limparFechamentoButton.setText(_translate("Dialog", "Limpar"))
+        self.dayLabel.setText(_translate("Dialog", "Quantia de Dias"))

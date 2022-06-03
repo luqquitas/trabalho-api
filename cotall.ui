@@ -11,13 +11,17 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Cotação de Todas Moedas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Desktop/icon.png</normaloff>../../../Desktop/icon.png</iconset>
   </property>
   <widget class="QPushButton" name="consultaButton">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>60</y>
+     <y>10</y>
      <width>381</width>
      <height>31</height>
     </rect>
@@ -43,9 +47,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
+     <y>61</y>
      <width>381</width>
-     <height>192</height>
+     <height>231</height>
     </rect>
    </property>
   </widget>

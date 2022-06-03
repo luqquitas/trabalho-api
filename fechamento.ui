@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Fechamento</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Desktop/icon.png</normaloff>../../../Desktop/icon.png</iconset>
   </property>
   <widget class="QLabel" name="moedaLabel">
    <property name="geometry">
