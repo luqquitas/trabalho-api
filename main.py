@@ -175,7 +175,7 @@ class Ui(QtWidgets.QDialog):
         self.moeda_2TextEdit.setText('')
         self.conteudoTextBrowser.setText('')
 
-
+#aa
 app = QtWidgets.QApplication(sys.argv)
 window = Ui()
 app.exec()
