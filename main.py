@@ -14,7 +14,7 @@ class Ui(QtWidgets.QDialog):
 
     def __init__(self):
         super(Ui, self).__init__()
-        uic.loadUi(R"C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\opcoes.ui", self)
+        uic.loadUi(R"opcoes.ui", self)
         self.show()
 
         self.cotaButton.clicked.connect(self.handleCotaButton)
@@ -23,7 +23,7 @@ class Ui(QtWidgets.QDialog):
 
     def handleFechamentoButton(self):
         super(Ui, self).__init__()
-        uic.loadUi(R"C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\fechamento.ui", self)
+        uic.loadUi(R"fechamento.ui", self)
         self.show()
 
         self.consultafechamento.clicked.connect(self.handleConsultaFechamento)
@@ -32,7 +32,7 @@ class Ui(QtWidgets.QDialog):
     def handleCotaButton(self):
 
         super(Ui, self).__init__()
-        uic.loadUi(R"C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\cotacao.ui", self)
+        uic.loadUi(R"cotacao.ui", self)
         self.show()
 
         self.consultacotacao.clicked.connect(self.handleConsultaCota)
@@ -40,7 +40,7 @@ class Ui(QtWidgets.QDialog):
 
     def handleCotallButton(self):
         super(Ui, self).__init__()
-        uic.loadUi(R"C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\cotall.ui", self)
+        uic.loadUi(R"cotall.ui", self)
         self.show()
         self.consultaButton.clicked.connect(self.handleConsultaAll)
 
