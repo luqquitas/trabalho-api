@@ -6,6 +6,8 @@ import sys
 import requests
 import json
 
+#autores Arthur Zaneti, Érick Matos e Lucas Cherobin 
+
 class Ui(QtWidgets.QDialog):
 
     def __init__(self):
