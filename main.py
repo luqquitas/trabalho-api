@@ -81,12 +81,64 @@ class Ui(QtWidgets.QDialog):
         response = requests.get(reqURL)
 
         contentJson = json.loads(response.content)
+        outputText = ''
 
-        valor = contentJson["ask"]
+        valor = contentJson["USD"]["ask"]
+        cod = contentJson["USD"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
 
-        cod = contentJson["code"]
-        
-        outputText += f'Código {cod}: {valor}\n'
+        valor = contentJson["CAD"]["ask"]
+        cod = contentJson["CAD"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["EUR"]["ask"]
+        cod = contentJson["EUR"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["ARS"]["ask"]
+        cod = contentJson["ARS"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["BTC"]["ask"]
+        cod = contentJson["BTC"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["LTC"]["ask"]
+        cod = contentJson["LTC"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["JPY"]["ask"]
+        cod = contentJson["JPY"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["CHF"]["ask"]
+        cod = contentJson["CHF"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["AUD"]["ask"]
+        cod = contentJson["AUD"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["CNY"]["ask"]
+        cod = contentJson["CNY"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["ILS"]["ask"]
+        cod = contentJson["ILS"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["ETH"]["ask"]
+        cod = contentJson["ETH"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["XRP"]["ask"]
+        cod = contentJson["XRP"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
+        valor = contentJson["DOGE"]["ask"]
+        cod = contentJson["DOGE"]["code"]
+        outputText += f'Moeda {cod}: {valor}\n'
+
 
         self.conteudoTextBrowser.setText(outputText)
         
