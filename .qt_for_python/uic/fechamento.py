@@ -16,7 +16,7 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 300)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("c:\\Users\\Lucas Cherobin\\Documents\\GitHub\\trabalho-api\\../../../Desktop/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("C:\\\\Users\\\\Lucas Cherobin\\\\Documents\\\\GitHub\\\\trabalho-api\\\\icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         self.moedaLabel = QtWidgets.QLabel(Dialog)
         self.moedaLabel.setGeometry(QtCore.QRect(10, 10, 101, 16))

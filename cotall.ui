@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../Desktop/icon.png</normaloff>../../../Desktop/icon.png</iconset>
+     <normaloff>C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\icon.png</normaloff>C:\Users\Lucas Cherobin\Documents\GitHub\trabalho-api\icon.png</iconset>
   </property>
   <widget class="QPushButton" name="consultaButton">
    <property name="geometry">
