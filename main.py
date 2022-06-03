@@ -6,7 +6,9 @@ import sys
 import requests
 import json
 
-#autores Arthur Zaneti, Érick Matos e Lucas Cherobin 
+
+#autores Arthur Zaneti, Érick Matos e Lucas Cherobin
+# Trabalho API de Moedas com PYQT 
 
 class Ui(QtWidgets.QDialog):
 
