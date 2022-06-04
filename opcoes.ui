@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-     <normaloff>icon.png</normaloff>icon.png</iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
   </property>
   <widget class="QPushButton" name="cotaButton">
    <property name="geometry">
@@ -54,6 +54,19 @@
    </property>
    <property name="text">
     <string>3 - Cotação de Todas Moedas</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="conversaoButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>361</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>4 - Conversão de Moedas</string>
    </property>
   </widget>
  </widget>
