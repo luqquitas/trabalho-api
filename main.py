@@ -20,6 +20,7 @@ class Ui(QtWidgets.QDialog):
         self.cotaButton.clicked.connect(self.handleCotaButton)
         self.fechamentoButton.clicked.connect(self.handleFechamentoButton)
         self.cotallButton.clicked.connect(self.handleCotallButton)
+        self.conversaoButton.clicked.connect(self.handleConversaoButton)
 
     def handleFechamentoButton(self):
         super(Ui, self).__init__()
@@ -43,6 +44,15 @@ class Ui(QtWidgets.QDialog):
         uic.loadUi(R"cotall.ui", self)
         self.show()
         self.consultaButton.clicked.connect(self.handleConsultaAll)
+        
+    def handleConversaoButton(self):
+    
+        super(Ui, self).__init__()
+        uic.loadUi(R"conversao.ui", self)
+        self.show()
+
+        self.consultaconversao.clicked.connect(self.handleConsultaConversao)
+        self.limparconversao.clicked.connect(self.handleLimparConversaoButton)
 
         
     def handleConsultaFechamento(self):
@@ -175,6 +185,44 @@ class Ui(QtWidgets.QDialog):
     def handleLimparCotaButton(self):
         self.moedaTextEdit.setText('')
         self.moeda_2TextEdit.setText('')
+        self.conteudoTextBrowser.setText('')
+        
+    def handleConsultaConversao(self):
+        
+        inputmoeda = self.moedaTextEdit.toPlainText()
+        inputmoeda_2 = self.moeda_2TextEdit.toPlainText()
+        inputvalor = float(self.valorTextEdit.toPlainText())
+
+        if inputmoeda == '' and inputmoeda_2 == None and inputvalor == None:
+            return
+        
+        reqURL = f'https://economia.awesomeapi.com.br/{inputmoeda}-{inputmoeda_2}'
+        print(reqURL)
+
+        response = requests.get(reqURL)
+
+        contentJson = json.loads(response.content)
+
+        valor = []
+        soma = 0
+        outputText = ''
+        
+        for dia in contentJson:
+            
+            valor = float(dia["ask"])
+            
+            soma = valor * inputvalor
+            
+            print(valor + soma)
+            
+            outputText += f'Na cotação de {valor: .2f}, a quantida de {inputvalor} {inputmoeda.upper()} equivale a {soma: .2f} {inputmoeda_2.upper()}\n'
+
+        self.conteudoTextBrowser.setText(outputText)
+    
+    def handleLimparConversaoButton(self):
+        self.moedaTextEdit.setText('')
+        self.moeda_2TextEdit.setText('')
+        self.valorTextEdit.setText('')
         self.conteudoTextBrowser.setText('')
 
 
